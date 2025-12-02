@@ -74,8 +74,17 @@
 
     </div>
     <div class="content">
+<<<<<<< HEAD
         @yield('students_content')
         @yield('subjects_content')
+=======
+        @yield('content')
+        @yield('students_content')
+        @yield('subjects_content')
+        @yield('group_content')
+        @yield('hall_content')
+        @yield('timetable_content')
+>>>>>>> c85620f (adding new files and codes)
     </div>
 </body>
 </html>

@@ -1,14 +1,10 @@
 @extends('layouts.template')
    
-<<<<<<< HEAD
-@section('content')
-=======
-@section('students_content')
->>>>>>> c85620f (adding new files and codes)
+@section('group_content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Students</h2>
+                <h2>Edit Group</h2>
             </div>
         </div>
     </div>
@@ -24,34 +20,28 @@
         </div>
     @endif
   
-    <form action="{{ route('students.update',$student->id) }}" method="POST">
+    <form action="{{ route('group.update',$group->id) }}" method="POST">
         @csrf
         @method('PUT')
    
          <div class="row">
-            <input type="hidden" name="id" value="{{ $student->id }}"> <br/>
+            <input type="hidden" name="id" value="{{ $group->id }}"> <br/>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $student->name }}" class="form-control" placeholder="Name">
+                    <input type="text" name="name" value="{{ $group->name }}" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
-                    <input type="type" class="form-control" name="email" value="{{ $student->email }}" placeholder="Email"></input>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Password:</strong>
-                    <input type="password" class="form-control" name="password" placeholder="Password"></input>
+                    <strong>part:</strong>
+                    <input type="type" class="form-control" name="part" value="{{ $group->part }}" placeholder="Part"></input>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('group.index') }}"> Back</a>
             </div>
         </div>
    

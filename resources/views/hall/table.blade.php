@@ -1,0 +1,52 @@
+@section('hall_content')
+
+<div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>List of Hall</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('hall.create') }}"> Add New Hall</a>
+            </div>
+        </div>
+    </div>
+   
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+   
+    <table class="table table-bordered">
+        <tr>
+            <th>No</th>
+            <th>Lecture Hall Name</th>
+            <th>Lecture Hall Place</th>
+            <th>Joined On</th>
+            <th width="280px">Action</th>
+        </tr>
+        @foreach ($hall as $s)
+        <tr>
+            <td>{{ $s->id }}</td>
+            <td>{{ $s->lecture_hall_name }}</td>
+            <td>{{ $s->lecture_hall_place }}</td>
+            <td>{{ $s->created_at }}</td>
+            <td>
+                <form action="{{ route('hall.destroy',$s->id) }}" method="POST">
+   
+                    <a class="btn btn-info" href="{{ route('hall.show',$s->id) }}">Show</a>
+    
+                    <a class="btn btn-primary" href="{{ route('hall.edit',$s->id) }}">Edit</a>
+   
+                    @csrf
+                    @method('DELETE')
+                    <div class="container">
+                        @yield('content')
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+@endsection

@@ -107,19 +107,31 @@
                 </a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a href="pages/UI/buttons.html" class="nav-link">
+=======
+                <a href="{{ route('group.index') }}" class="nav-link">
+>>>>>>> c85620f (adding new files and codes)
                   <i class="far fa-circle nav-icon"></i>
                   <p>List of Groups</p>
                 </a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a href="pages/UI/sliders.html" class="nav-link">
+=======
+                <a href="{{ route('hall.index') }}" class="nav-link">
+>>>>>>> c85620f (adding new files and codes)
                   <i class="far fa-circle nav-icon"></i>
                   <p>List of Halls</p>
                 </a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a href="pages/UI/modals.html" class="nav-link">
+=======
+                <a href="{{ route('timetable.index') }}" class="nav-link">
+>>>>>>> c85620f (adding new files and codes)
                   <i class="far fa-circle nav-icon"></i>
                   <p>List of Timetables</p>
                 </a>
@@ -178,6 +190,12 @@
     <!-- /.content-header -->
      @yield('students_content')
       @yield('subjects_content')
+<<<<<<< HEAD
+=======
+      @yield('group_content')
+      @yield('hall_content')
+      @yield('timetable_content')
+>>>>>>> c85620f (adding new files and codes)
   </div>
 
   <!-- /.content-wrapper -->
